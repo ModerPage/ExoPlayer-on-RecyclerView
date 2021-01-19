@@ -116,12 +116,6 @@ public class VideoPlayerRecyclerView extends RecyclerView {
         // by this setting it automatically use the video aspect ratio, and fit inside view perfectly
         videoSurfaceView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_ZOOM);
 
-        BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter.Builder(context).build();
-        TrackSelection.Factory videoTrackSelectionFactory =
-                new AdaptiveTrackSelection.Factory();
-        TrackSelector trackSelector =
-                new DefaultTrackSelector(context, videoTrackSelectionFactory);
-
         // 2. Create the player
         videoPlayer = new SimpleExoPlayer.Builder(context).build();
 
@@ -341,7 +335,9 @@ public class VideoPlayerRecyclerView extends RecyclerView {
 
         int[] location = new int[2];
         child.getLocationInWindow(location);
-
+        Log.d(TAG, "getVisibleVideoSurfaceHeight: location : " + location[0] + ", " + location[1] + "at position: " + at);
+        Log.d(TAG, "getVisibleVideoSurfaceHeight: videoSurfaceDefaultHeight: " + videoSurfaceDefaultHeight);
+        Log.d(TAG, "getVisibleVideoSurfaceHeight: screenDefaultHeight: " + screenDefaultHeight);
         if (location[1] < 0) {
             return location[1] + videoSurfaceDefaultHeight;
         } else {
