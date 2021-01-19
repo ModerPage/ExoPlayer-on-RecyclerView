@@ -16,7 +16,7 @@ import me.modernpage.videoplayerexoplayerrecylerview.model.MediaObject;
  * this is just an adapter for our custom recycler view, all the media objects and glide request manager
  * is injected here, and onBind method invoke onBind of viewholder object
  *
- * all other logic to set mediaObject's content to view will be implemented on {@link CustomRecyclerView}
+ * all other logic to set mediaObject's content to view will be implemented on {@link VideoPlayerRecyclerView}
  */
 
 public class VideoPlayerRecyclerViewAdapter extends RecyclerView.Adapter<VideoPlayerRecyclerViewHolder> {

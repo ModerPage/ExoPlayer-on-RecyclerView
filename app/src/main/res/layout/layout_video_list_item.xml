@@ -6,7 +6,7 @@
     before playing the video,
     when scroll to another item, old one video view is removed and the imageView is set visible again
 -->
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -72,6 +72,5 @@
             android:visibility="gone"
             android:layout_gravity="center" />
 
-
     </FrameLayout>
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
